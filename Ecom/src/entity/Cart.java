@@ -15,7 +15,15 @@ public class Cart {
 
     public Map<Product, Integer> getItems() { return items; }
 
-    public void addProduct(Product product, int quantity) {
+    public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+
+	public void setItems(Map<Product, Integer> items) {
+		this.items = items;
+	}
+
+	public void addProduct(Product product, int quantity) {
         items.put(product, items.getOrDefault(product, 0) + quantity);
     }
 
